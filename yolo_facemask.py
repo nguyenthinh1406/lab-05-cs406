@@ -11,7 +11,7 @@ with tab1:
     picture = st.camera_input("Take a picture", disabled=not enable)
     if picture:
         image = Image.open(picture)
-        results = model.predict(source=image, conf=0.25)
+        results = model.predict(source=image, conf=0.15)
         res_plotted = results[0].plot()
         st.image(image, caption="Ảnh đầu vào")
         st.image(res_plotted, caption="Kết quả dự đoán", channels="BGR")
@@ -21,7 +21,7 @@ with tab2:
 
     if upload_im:
         image = Image.open(upload_im)
-        results = model.predict(source=image, conf=0.25)
+        results = model.predict(source=image, conf=0.15)
         res_plotted = results[0].plot()
         st.image(image, caption="Ảnh đầu vào")
         st.image(res_plotted, caption="Kết quả dự đoán", channels="BGR")
