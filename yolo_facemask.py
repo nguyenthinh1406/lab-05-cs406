@@ -2,7 +2,7 @@ import streamlit as st
 from ultralytics import YOLO
 from PIL import Image
 
-model = YOLO(r"D:\UIT\HK3\XU_LI_ANH\facemask\best.pt")
+model = YOLO("best.pt")
 
 tab1, tab2 = st.tabs(["Camera", "Chọn ảnh"])
 
